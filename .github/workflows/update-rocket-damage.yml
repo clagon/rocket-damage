@@ -18,7 +18,7 @@ jobs:
       - name: Checkout private data repository
         uses: actions/checkout@v5
         with:
-          repository: clagon/rocket-damage-data
+          repository: clagon/fetch-cr-data
           ssh-key: ${{ secrets.DATA_REPO_SSH_KEY }}
           path: data-repo
 

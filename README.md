@@ -8,7 +8,7 @@ The site reads `src/lib/data/rocket-damage.json`. A GitHub Actions workflow clon
 
 Add this secret to the public repository:
 
-- `DATA_REPO_SSH_KEY`: private key for a read-only deploy key registered on `clagon/rocket-damage-data`.
+- `DATA_REPO_SSH_KEY`: private key for a read-only deploy key registered on `clagon/fetch-cr-data`.
 
 The workflow uses the repository `GITHUB_TOKEN` to push JSON changes back to this public repository.
 
