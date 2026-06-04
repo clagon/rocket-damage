@@ -1,0 +1,133 @@
+{
+  "generatedAt": "2026-06-04T01:46:06.471Z",
+  "source": {
+    "game": "Clash Royale",
+    "clientVersion": "15.535.3",
+    "fingerprintVersion": "local-assets",
+    "rarity": "Rare",
+    "baseDamage": 700,
+    "crownTowerDamagePercent": -75
+  },
+  "levels": [
+    {
+      "level": 3,
+      "damage": 847,
+      "crownTowerDamage": 212,
+      "multiplier": 121,
+      "mirrorDamage": 233,
+      "totalDamage": 445
+    },
+    {
+      "level": 4,
+      "damage": 931,
+      "crownTowerDamage": 233,
+      "multiplier": 133,
+      "mirrorDamage": 256,
+      "totalDamage": 489
+    },
+    {
+      "level": 5,
+      "damage": 1022,
+      "crownTowerDamage": 256,
+      "multiplier": 146,
+      "mirrorDamage": 280,
+      "totalDamage": 536
+    },
+    {
+      "level": 6,
+      "damage": 1120,
+      "crownTowerDamage": 280,
+      "multiplier": 160,
+      "mirrorDamage": 308,
+      "totalDamage": 588
+    },
+    {
+      "level": 7,
+      "damage": 1232,
+      "crownTowerDamage": 308,
+      "multiplier": 176,
+      "mirrorDamage": 338,
+      "totalDamage": 646
+    },
+    {
+      "level": 8,
+      "damage": 1351,
+      "crownTowerDamage": 338,
+      "multiplier": 193,
+      "mirrorDamage": 371,
+      "totalDamage": 709
+    },
+    {
+      "level": 9,
+      "damage": 1484,
+      "crownTowerDamage": 371,
+      "multiplier": 212,
+      "mirrorDamage": 408,
+      "totalDamage": 779
+    },
+    {
+      "level": 10,
+      "damage": 1631,
+      "crownTowerDamage": 408,
+      "multiplier": 233,
+      "mirrorDamage": 448,
+      "totalDamage": 856
+    },
+    {
+      "level": 11,
+      "damage": 1792,
+      "crownTowerDamage": 448,
+      "multiplier": 256,
+      "mirrorDamage": 492,
+      "totalDamage": 940
+    },
+    {
+      "level": 12,
+      "damage": 1967,
+      "crownTowerDamage": 492,
+      "multiplier": 281,
+      "mirrorDamage": 541,
+      "totalDamage": 1033
+    },
+    {
+      "level": 13,
+      "damage": 2163,
+      "crownTowerDamage": 541,
+      "multiplier": 309,
+      "mirrorDamage": 594,
+      "totalDamage": 1135
+    },
+    {
+      "level": 14,
+      "damage": 2373,
+      "crownTowerDamage": 594,
+      "multiplier": 339,
+      "mirrorDamage": 651,
+      "totalDamage": 1245
+    },
+    {
+      "level": 15,
+      "damage": 2604,
+      "crownTowerDamage": 651,
+      "multiplier": 372,
+      "mirrorDamage": 716,
+      "totalDamage": 1367
+    },
+    {
+      "level": 16,
+      "damage": 2863,
+      "crownTowerDamage": 716,
+      "multiplier": 409,
+      "mirrorDamage": 788,
+      "totalDamage": 1504
+    },
+    {
+      "level": 17,
+      "damage": 3150,
+      "crownTowerDamage": 788,
+      "multiplier": 450,
+      "mirrorDamage": 867,
+      "totalDamage": 1655
+    }
+  ]
+}
