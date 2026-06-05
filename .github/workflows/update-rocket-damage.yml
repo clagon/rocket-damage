@@ -31,6 +31,20 @@ jobs:
             package-lock.json
             data-repo/package-lock.json
 
+      - name: Set up Rust for apkeep
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache apkeep binary
+        id: cache-apkeep
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/apkeep
+          key: apkeep-${{ runner.os }}-stable
+
+      - name: Install apkeep
+        if: steps.cache-apkeep.outputs.cache-hit != 'true'
+        run: cargo install apkeep --locked
+
       - name: Install data generator dependencies
         working-directory: data-repo
         run: npm ci
@@ -38,7 +52,7 @@ jobs:
       - name: Generate JSON
         working-directory: data-repo
         run: |
-          if ! npm run generate -- --out ../src/lib/data/rocket-damage.json; then
+          if ! npm run generate:apkpure -- --out ../src/lib/data/rocket-damage.json; then
             if [ -f ../src/lib/data/rocket-damage.json ]; then
               echo "::warning::Asset fetch failed; keeping existing rocket damage JSON."
             else
