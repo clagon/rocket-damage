@@ -37,7 +37,15 @@ jobs:
 
       - name: Generate JSON
         working-directory: data-repo
-        run: npm run generate -- --out ../src/lib/data/rocket-damage.json
+        run: |
+          if ! npm run generate -- --out ../src/lib/data/rocket-damage.json; then
+            if [ -f ../src/lib/data/rocket-damage.json ]; then
+              echo "::warning::Asset fetch failed; keeping existing rocket damage JSON."
+            else
+              echo "::error::Asset fetch failed and no existing rocket damage JSON is available."
+              exit 1
+            fi
+          fi
 
       - name: Install web dependencies
         run: npm ci
