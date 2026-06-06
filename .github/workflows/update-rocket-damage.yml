@@ -53,13 +53,20 @@ jobs:
       - name: Generate JSON
         working-directory: data-repo
         run: |
-          if ! npm run generate:apkpure -- --out ../src/lib/data/rocket-damage.json; then
+          set +e
+          npm run generate:apkpure -- --out ../src/lib/data/rocket-damage.json
+          status=$?
+          set -e
+
+          if [ "$status" -eq 2 ] && [ -f ../src/lib/data/rocket-damage.json ]; then
+            echo "::warning::APKPure download failed; keeping existing rocket damage JSON."
+          elif [ "$status" -ne 0 ]; then
             if [ -f ../src/lib/data/rocket-damage.json ]; then
-              echo "::warning::Asset fetch failed; keeping existing rocket damage JSON."
+              echo "::error::Rocket damage generation failed; existing JSON was left unchanged."
             else
-              echo "::error::Asset fetch failed and no existing rocket damage JSON is available."
-              exit 1
+              echo "::error::Rocket damage generation failed and no existing rocket damage JSON is available."
             fi
+            exit "$status"
           fi
 
       - name: Install web dependencies
